@@ -288,12 +288,14 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-bottom:  1px solid var(--clr-primary-5) ;
 }
 .service-icon {
   background: var(--clr-primary-5);
   width: fit-content;
   padding: 0.5rem;
-  margin-bottom: 1.5rem;
+
+  margin-bottom: 1.5rem; 
 }
 .service h3 {
   text-align: center;
