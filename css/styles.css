@@ -12,6 +12,7 @@ Variables
 
 :root {
   /* dark shades of primary color*/
+  /* --clr-primary-extra: #044e53; */
   --clr-primary-1: hsl(184, 91%, 17%);
   --clr-primary-2: hsl(185, 84%, 25%);
   --clr-primary-3: hsl(185, 81%, 29%);
@@ -50,7 +51,9 @@ Global Styles
 ===============
 */
 
-*,::before,::after {
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -167,7 +170,6 @@ button {
   color: var(--clr-primary-5);
 }
 /* section and media-query */
- 
 
 /* end of global classes */
 
@@ -238,25 +240,25 @@ button {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-} 
-  .about-img::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 0.5rem solid var(--clr-primary-5);  
-  }
-  .about-img {
-    position: relative; 
-  }
+}
+.about-img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0.5rem solid var(--clr-primary-5);
+}
+.about-img {
+  position: relative;
+}
 @media screen and (min-width: 768px) {
   .about-center {
     flex-direction: row;
     align-items: center;
-  } 
+  }
 }
-@media screen and (min-width: 992px) { 
-  .about-img::before { 
+@media screen and (min-width: 992px) {
+  .about-img::before {
     border: 0.5rem solid var(--clr-primary-5);
     top: -1rem;
     left: -1rem;
@@ -271,6 +273,34 @@ button {
 }
 /* 
 ===============================
-  NEW SECTION
+  SERVICES
 ===============================
 */
+.services {
+  background: var(--clr-grey-10);
+}
+.services-center {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.service-icon {
+  background: var(--clr-primary-5);
+  width: fit-content;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.service h3 {
+  text-align: center;
+  font-size: 0.875rem;
+}
+.service p {
+  margin-left: 0.875rem;
+  margin-right: 0.875rem;
+  text-align: center;
+}
