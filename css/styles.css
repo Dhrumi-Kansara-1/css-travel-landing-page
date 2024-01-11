@@ -282,27 +282,62 @@ button {
 .services-center {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1rem;
 }
 .service {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border-bottom:  1px solid var(--clr-primary-5) ;
-}
+  align-items: center;  
+  text-align: center;
+
+} 
 .service-icon {
   background: var(--clr-primary-5);
   width: fit-content;
-  padding: 0.5rem;
-
+  padding: 0.5rem; 
   margin-bottom: 1.5rem; 
+  display: inline-block;
 }
-.service h3 {
-  text-align: center;
-  font-size: 0.875rem;
-}
+/* .service h4 { 
+} */
 .service p {
-  margin-left: 0.875rem;
-  margin-right: 0.875rem;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto; 
+  max-width: 20rem;
 }
+
+@media screen and (min-width:768px) {
+  .services-center { 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  } 
+  .service {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media screen and (min-width:992px) { 
+  .service { 
+    width: calc(30% - 1rem);
+    flex-direction: row;
+    align-items: start; 
+    text-align: left;
+    gap: 0.875rem;
+  } 
+  .service h4 {
+    margin-bottom: 0.5rem;
+  }
+}
+/* 
+===============================
+  FEATURED TOURS SECTION
+===============================
+*/
+
+
+/* 
+===============================
+  sample SECTION
+===============================
+*/
