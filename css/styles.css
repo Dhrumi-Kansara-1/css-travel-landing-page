@@ -12,13 +12,12 @@ Variables
 
 :root {
   /* dark shades of primary color*/
-  /* --clr-primary-extra: #044e53; */
   --clr-primary-1: hsl(184, 91%, 17%);
   --clr-primary-2: hsl(185, 84%, 25%);
   --clr-primary-3: hsl(185, 81%, 29%);
   --clr-primary-4: hsl(184, 77%, 34%);
   /* primary/main color */
-  --clr-primary-5: rgb(44, 174, 186);
+  --clr-primary-5: hsl(185, 62%, 45%);
   /* lighter shades of primary color */
   --clr-primary-6: hsl(185, 57%, 50%);
   --clr-primary-7: hsl(184, 65%, 59%);
@@ -341,7 +340,7 @@ button {
 .tour {
   box-shadow: var(--light-shadow);
   transition: var(--transition);
-  background: var(--clr-grey-10);
+  background: var(--clr-grey-10); 
 }
 .tour:hover {
   box-shadow: var(--dark-shadow);
@@ -377,7 +376,7 @@ button {
 .tour-price {
   color: var(--clr-primary-5);
 }
-
+/* FEATURED TOURS SECTION AND MEDIA-QUERY */ 
 @media screen and (min-width: 768px) {
   .tours-center {
     display: flex;
