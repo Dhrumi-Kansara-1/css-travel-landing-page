@@ -18,7 +18,7 @@ Variables
   --clr-primary-3: hsl(185, 81%, 29%);
   --clr-primary-4: hsl(184, 77%, 34%);
   /* primary/main color */
-  --clr-primary-5: hsl(185, 62%, 45%);
+  --clr-primary-5: rgb(44, 174, 186);
   /* lighter shades of primary color */
   --clr-primary-6: hsl(185, 57%, 50%);
   --clr-primary-7: hsl(184, 65%, 59%);
@@ -287,44 +287,43 @@ button {
 .service {
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
   text-align: center;
-
-} 
+}
 .service-icon {
   background: var(--clr-primary-5);
   width: fit-content;
-  padding: 0.5rem; 
-  margin-bottom: 1.5rem; 
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
   display: inline-block;
 }
 /* .service h4 { 
 } */
 .service p {
   margin-left: auto;
-  margin-right: auto; 
+  margin-right: auto;
   max-width: 20rem;
 }
 
-@media screen and (min-width:768px) {
-  .services-center { 
+@media screen and (min-width: 768px) {
+  .services-center {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-  } 
+  }
   .service {
     width: calc(50% - 1rem);
   }
 }
 
-@media screen and (min-width:992px) { 
-  .service { 
+@media screen and (min-width: 992px) {
+  .service {
     width: calc(30% - 1rem);
     flex-direction: row;
-    align-items: start; 
+    align-items: start;
     text-align: left;
     gap: 0.875rem;
-  } 
+  }
   .service h4 {
     margin-bottom: 0.5rem;
   }
@@ -334,8 +333,68 @@ button {
   FEATURED TOURS SECTION
 ===============================
 */
+.tours-center {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.tour {
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+  background: var(--clr-grey-10);
+}
+.tour:hover {
+  box-shadow: var(--dark-shadow);
+}
+.tour-img-container {
+  position: relative;
+}
+.tour-date {
+  position: absolute;
+  color: var(--clr-white);
+  background: var(--clr-primary-5);
+  padding: 0.25rem 0.5rem;
+  bottom: 0;
+  right: 0;
+}
+.tour-info {
+  padding: 1.25rem 1.5rem;
+}
+.tour-desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+}
+.tour-location {
+  display: flex;
+  align-items: center;
+  color: var(--clr-primary-5);
+}
+.tour-days {
+  color: var(--clr-primary-5);
+}
+.tour-price {
+  color: var(--clr-primary-5);
+}
 
-
+@media screen and (min-width: 768px) {
+  .tours-center {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .tour {
+    width: calc(50% - 1.5rem);
+  }
+}
+@media screen and (min-width: 1170px) {
+  .tour {
+    width: calc(30.33% - 1.5rem);
+  }
+}
 /* 
 ===============================
   sample SECTION
