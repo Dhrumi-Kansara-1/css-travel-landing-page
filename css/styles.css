@@ -338,43 +338,72 @@ button {
   gap: 1.5rem;
 }
 .tour {
-  box-shadow: var(--light-shadow);
   transition: var(--transition);
+  box-shadow: var(--light-shadow);
   background: var(--clr-grey-10); 
 }
 .tour:hover {
   box-shadow: var(--dark-shadow);
+  transform: scale(1.02);
 }
 .tour-img-container {
   position: relative;
 }
+.tour-img {
+    height: 15rem;
+  object-fit: cover;
+}
+.tour-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+} 
+.tour-title {
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+.tour-days {
+  color: var(--clr-grey-7); 
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
 .tour-date {
-  position: absolute;
+  position: absolute; 
   color: var(--clr-white);
   background: var(--clr-primary-5);
   padding: 0.25rem 0.5rem;
   bottom: 0;
   right: 0;
+  text-transform: capitalize;
 }
 .tour-info {
   padding: 1.25rem 1.5rem;
 }
-.tour-desc {
+.tour-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-transform: capitalize;
+
 }
 .tour-location {
   display: flex;
   align-items: center;
   color: var(--clr-primary-5);
+  gap:0.2rem;
+  margin-bottom: 0;
 }
-.tour-days {
-  color: var(--clr-primary-5);
-}
+
 .tour-price {
   color: var(--clr-primary-5);
+    margin-bottom: 0; 
+}
+.tours-btn { 
+  /* margin-top: 1.5rem;  */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 /* FEATURED TOURS SECTION AND MEDIA-QUERY */ 
 @media screen and (min-width: 768px) {
@@ -383,7 +412,7 @@ button {
     flex-direction: row;
     gap: 1.5rem;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
   .tour {
     width: calc(50% - 1.5rem);
@@ -391,8 +420,32 @@ button {
 }
 @media screen and (min-width: 1170px) {
   .tour {
-    width: calc(30.33% - 1.5rem);
+    width: calc(30.333% - 1.5rem);
   }
+}
+/* 
+===============================
+  CONTACT
+===============================
+*/
+.contact {
+  background: var(--clr-primary-5);
+}
+.contact-center {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.contact-title {
+  color: var(--clr-white);
+  text-transform: capitalize;
+  /* font-weight: bold;  */
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+.contact-subtitle {
+  color: var(--clr-primary-7);
 }
 /* 
 ===============================
